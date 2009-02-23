@@ -19,15 +19,17 @@
 		color: #99a;
       }
  
-      .links {
+      #links {
         position: absolute;
-        left: 750px;
-        top: 30px;
-        list-style-type: none;
+        left: 50px;
+        top: 50px;
       }
  
       #repos {
-        top: 70px;
+		position: absolute;
+	    left: 450px;
+        top: 100px;
+        list-style-type: none;
       }
  
       a {
@@ -44,7 +46,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(function() {
-        var limit = 30 // how many repos to list
+        var limit = 50 // how many repos to list
         var login = 'rpj' // your username
  
         $.getJSON('http://github.com/api/v1/json/' + login + '?callback=?', function(data) {
@@ -64,14 +66,11 @@
     </script>
   </head>
   <body>
-    <a href="http://github.com/rpj/rpj.github.com">
-	<img style="position:absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png" alt="Fork me on GitHub" /></a>
-	  <div id="links" class="links">
+	  <div id="links">
       <a href="http://twitter.com/rpj">twitter</a> /
-      <a href="http://github.com/rpj">github</a> /
-      <a href="mailto:j@seph.us">j</a>@<a href="http://seph.us">seph.us</a>
+      <a href="http://github.com/rpj">github</a>
 	  </div>
-    <div class="links" id="repos">
+    <div id="repos">
       <h3>repositories</h3>
     </div>
   </body>
